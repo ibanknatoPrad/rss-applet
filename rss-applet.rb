@@ -1,4 +1,21 @@
 #!/usr/bin/ruby
+#
+# Copyright 2008, Matt Colyer
+#
+# This package is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+#
+# This package is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with this package; if not, write to the Free Software
+# Foundation, 51 Franklin Street, Fifth Floor, Boston, MA, 02110-1301 USA.
+#
 
 require 'gtk2'
 require 'gconf2'
@@ -18,7 +35,7 @@ $gconf_client = GConf::Client.default
 class RssApplet < Gtk::Window
   def initialize()
     super(Gtk::Window::TOPLEVEL)
-    set_title("Craigslist Applet")
+    set_title("RSS Applet")
     set_border_width(5)
 
     signal_connect("destroy"){
@@ -29,6 +46,7 @@ class RssApplet < Gtk::Window
 
     update_items
     
+    # Setup the headline widget to be displayed
     @headline = Gtk::LinkButton.new(@items.first.link, @items.first.title)
     @headline.signal_connect('clicked') {link_clicked(@headline.uri)}
     add(@headline)
@@ -40,6 +58,7 @@ class RssApplet < Gtk::Window
     show_all
   end
 
+  # Event handler for clicking on a link
   def link_clicked(url)
     browser_command = $gconf_client["/desktop/gnome/url-handlers/http/command"]
     fork {system(browser_command % url)}
@@ -71,6 +90,7 @@ class RssApplet < Gtk::Window
     end
   end
 
+  # Cleanup function
   def destroy(widget)
     Gtk.main_quit
   end
