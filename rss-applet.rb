@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 
 require 'gtk2'
+require 'gconf2'
 require 'net/http'
 require 'feedparser'
 require 'feedparser/text-output'
@@ -11,6 +12,8 @@ require 'date'
 URL = 'http://sfbay.craigslist.org/sfc/zip/index.rss'
 SECONDS_TO_DISPLAY = 30
 CACHE_TIMEOUT = (15.0/(60*24))
+
+$gconf_client = GConf::Client.default
 
 class RssApplet < Gtk::Window
   def initialize()
@@ -26,7 +29,6 @@ class RssApplet < Gtk::Window
 
     update_items
     
-    #print @items.first.link
     @headline = Gtk::LinkButton.new(@items.first.link, @items.first.title)
     @headline.signal_connect('clicked') {link_clicked(@headline.uri)}
     add(@headline)
@@ -39,7 +41,8 @@ class RssApplet < Gtk::Window
   end
 
   def link_clicked(url)
-    fork {system("sensible-browser %s" % url)}
+    browser_command = $gconf_client["/desktop/gnome/url-handlers/http/command"]
+    fork {system(browser_command % url)}
   end
 
   # Switches the headline label to the next headline. If it has already
