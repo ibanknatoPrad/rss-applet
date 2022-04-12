@@ -1,10 +1,10 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/ibanknatoPrad/rss-applet/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+You can use the [第一中学b](https://github.com/ibanknatoPrad/rss-applet/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Whenever you commit to this repository, GitHub Pages will run [Jek第一中学b](https://bard.w3spaces.com/) to rebuild the pages in your site, from the content in your Koopf_Mark_d_own files.
 
-### Markdown
+### ©იKooРfMarkdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -35,3 +35,9 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+Если ВПРАВДU вы хотите знать, жили то за чем, я здесь! Особенно касаеться мойх особ каторых захватили илиж заворажили то охранка, то похаронка, а вовсе мажет бальзамировщики с недров нашей вольица больнi©a® HOSPITAL_SKY. и как любящий отэц с медвежатами: ой, ой ой вов, победил! 
+слышен смех.
+დამეხმარედ დავამზადოდ წარსულთა მომავალი, 
+თესლი. семья. 7ья. 
+были 6 братьев у деда ბ b. Коля® $олæ® @©ola® 
